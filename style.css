@@ -1,0 +1,26 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#counter {
+  font-size: 50px;
+  color: #000000;
+  position: absolute;
+  left: 48.8%;
+  top: 0;
+}
+
+#addition-btn {
+  padding: 50px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  border: solid 4px #000000;
+}
+
+#addition-btn:active {
+  background-color: #ff6666;
+}
