@@ -1,5 +1,5 @@
-const additionbutton = document.getElementById("btn");
-const number = document.getElementById("counter");
+const additionbutton = document.getElementById("#addition-btn");
+const number = document.getElementById("#counter");
 
 let count = 0;
 
