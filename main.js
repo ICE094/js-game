@@ -1,13 +1,24 @@
-const additionbutton = document.getElementById("#addition-btn");
-const number = document.getElementById("#counter");
+const additionbutton = document.getElementById("addition-btn");
+const buybutton = document.getElementById("buy-btn");
+const number = document.getElementById("counter");
 
-let count = 0;
+let maincount = 0;
+let levelcount = 0;
 
 additionbutton.addEventListener(
   "click",
   function () {
-    count++;
-    number.textContent = count;
+    maincount++;
+    number.textContent = maincount;
+  },
+  false
+);
+
+buybutton.addEventListener(
+  "click",
+  function () {
+    levelcount++;
+    buybutton.textContent = `level${levelcount}`;
   },
   false
 );

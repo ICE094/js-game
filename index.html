@@ -1,14 +1,18 @@
 <html>
   <head>
     <title>Clicker-Game</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <script src="main.js"></script>
+  </head>
   <body>
     <div class="container">
-        <input type="text" value="0" id="counter" disabled="true" />
-      <button type="button" id="addition-btn" ></button>
+      <div class="main-btn">
+        <p id="counter">0</p>
+        <button type="button" id="addition-btn"></button>
+      </div>
+      <div class="shop"><button type="button" id="buy-btn">level0</button></div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

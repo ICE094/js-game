@@ -1,4 +1,4 @@
-.container {
+.main-btn {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -23,4 +23,21 @@
 
 #addition-btn:active {
   background-color: #ff6666;
+}
+
+.shop {
+  margin-right: 40px;
+  display: flex;
+  justify-content: right;
+}
+
+#buy-btn {
+  padding: 20px 60px;
+  border-radius: 10px;
+  background-color: #0095ff;
+  border: solid 4px #000000;
+}
+
+#buy-btn:active {
+  background-color: #66cfff;
 }
