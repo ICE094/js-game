@@ -7,11 +7,21 @@
   </head>
   <body>
     <div class="container">
+      <div class="shop">
+        <button type="button" id="display-btn" class="btn hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="shop" style="display: none">
+          <button type="button" id="buy-btn" class="btn">level0</button>
+        </div>
+      </div>
+
       <div class="main-btn">
         <p id="counter">0</p>
-        <button type="button" id="addition-btn"></button>
+        <button type="button" id="addition-btn" class="btn"></button>
       </div>
-      <div class="shop"><button type="button" id="buy-btn">level0</button></div>
     </div>
     <script src="main.js"></script>
   </body>

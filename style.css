@@ -1,14 +1,22 @@
+body {
+  background-color: #000000;
+}
+
 .main-btn {
-  margin-top: 50px;
+  margin: 50px 0 300px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.btn {
+  color: #fff;
+}
+
 #counter {
   font-size: 50px;
-  color: #000000;
+  color: #fff;
   position: absolute;
   top: 0;
   text-align: center;
@@ -18,24 +26,80 @@
   padding: 50px;
   border-radius: 50%;
   background-color: #ff0000;
-  border: solid 4px #000000;
+  border: solid 4px #fff;
 }
 
 #addition-btn:active {
   background-color: #ff6666;
 }
 
+#display-btn {
+  font-size: 70px;
+}
+
+.shop-btn {
+  width: 42px;
+  height: 42px;
+  position: fixed;
+  z-index: 40;
+}
+
+#display-btn {
+  width: 42px;
+  height: 42px;
+}
+
+#display-btn span {
+  margin-top: 17px;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 6px;
+  transition: 0.1s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 1px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 21px;
+}
+
+.X span:nth-child(1) {
+  top: 11px;
+  left: 6px;
+  transform: rotate(-45deg);
+}
+
+.X span:nth-child(2),
+.X span:nth-child(3) {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
 .shop {
-  margin-right: 40px;
+  width: 300px;
+  height: 100%;
   display: flex;
-  justify-content: right;
+  flex-direction: column;
+  justify-content: left;
+  position: fixed;
+  top: 20px;
+  z-index: 40;
 }
 
 #buy-btn {
+  margin-top: 20px;
   padding: 20px 60px;
   border-radius: 10px;
   background-color: #0095ff;
-  border: solid 4px #000000;
+  border: solid 4px #fff;
 }
 
 #buy-btn:active {
