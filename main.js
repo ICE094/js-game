@@ -1,42 +1,43 @@
-const additionbutton = document.getElementById("addition-btn");
-const buybutton = document.getElementById("buy-btn");
-const displaybutton = document.getElementById("display-btn");
+const AdditionButton = document.getElementById("addition-btn");
+const BuyButton = document.getElementById("buy-btn");
+const DisplayButton = document.getElementById("display-btn");
 const shop = document.getElementById("shop");
 
 const number = document.getElementById("counter");
 
 let maincount = 0;
-let levelcount = 0;
+let levelcount = 1;
 
-additionbutton.addEventListener(
-  "click",
-  function () {
-    maincount++;
-    number.textContent = maincount;
-  },
-  false
-);
+function countUp() {
+  maincount++;
+  number.textContent = maincount;
+}
 
-buybutton.addEventListener(
+AdditionButton.addEventListener("click", countUp, false);
+
+BuyButton.addEventListener(
   "click",
-  function () {
+  () => {
     levelcount++;
-    buybutton.textContent = `level${levelcount}`;
+    BuyButton.textContent = `level${levelcount}`;
+    setInterval(countUp, 1000 - levelcount);
   },
   false
 );
 
-displaybutton.addEventListener(
+DisplayButton.addEventListener(
   "click",
   function () {
     if (shop.style.display == "block") {
       shop.style.display = "none";
-      displaybutton.classList.remove("X");
-      displaybutton.classList.add("hamburger");
+      shop.classList.remove("shop");
+      DisplayButton.classList.remove("X");
+      DisplayButton.classList.add("hamburger");
     } else {
       shop.style.display = "block";
-      displaybutton.classList.add("X");
-      displaybutton.classList.remove("hamburger");
+      shop.classList.add("shop");
+      DisplayButton.classList.add("X");
+      DisplayButton.classList.remove("hamburger");
     }
   },
   false

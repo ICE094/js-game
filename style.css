@@ -3,7 +3,8 @@ body {
 }
 
 .main-btn {
-  margin: 50px 0 300px 0;
+  margin: 50px 0 0 300px;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,7 +84,12 @@ body {
   transform: rotate(45deg);
 }
 
-.shop {
+#shop {
+  transform: translateX(-300px);
+  transition: 0.5s;
+}
+
+.header {
   width: 300px;
   height: 100%;
   display: flex;
@@ -92,6 +98,10 @@ body {
   position: fixed;
   top: 20px;
   z-index: 40;
+}
+
+.shop {
+  transform: translateX(0px);
 }
 
 #buy-btn {
