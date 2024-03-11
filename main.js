@@ -2,6 +2,7 @@ const AdditionButton = $("#addition-btn");
 const BuyButton = $("#buy-btn");
 const DisplayButton = $("#display-btn");
 const shop = $("#shop");
+const header = $(".header");
 
 const number = $("#counter");
 
@@ -11,33 +12,25 @@ let intervalID = 0;
 
 function countUp() {
   maincount++;
-  number.textContent = maincount;
+  number.text(maincount);
 }
 
-$("#AdditionButton").on("click", countUp, false);
+AdditionButton.on("click", countUp);
 
-$("#BuyButton").on(
-  "click",
-  () => {
-    levelcount++;
-    BuyButton.textContent = `level${levelcount}`;
-    intervalID = setInterval(countUp, 1000);
-  },
-  false
-);
+BuyButton.on("click", () => {
+  levelcount++;
+  BuyButton.text(`level${levelcount}`);
+  intervalID = setInterval(countUp, 1000);
+});
 
-$("#DisplayButton").on(
-  "click",
-  () => {
-    if (shop.classList == "shop shop-active") {
-      shop.classList.remove("shop-active");
-      DisplayButton.classList.remove("X");
-      DisplayButton.classList.add("hamburger");
-    } else {
-      shop.classList.add("shop-active");
-      DisplayButton.classList.add("X");
-      DisplayButton.classList.remove("hamburger");
-    }
-  },
-  false
-);
+DisplayButton.on("click", () => {
+  if (shop.hasClass("shop-active")) {
+    shop.removeClass("shop-active");
+    DisplayButton.removeClass("X");
+    DisplayButton.addClass("hamburger");
+  } else {
+    shop.addClass("shop-active");
+    DisplayButton.addClass("X");
+    DisplayButton.removeClass("hamburger");
+  }
+});
