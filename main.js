@@ -3,6 +3,7 @@ const BuyButton = $("#buy-btn");
 const DisplayButton = $("#display-btn");
 const shop = $("#shop");
 const header = $(".header");
+const MainButton = $(".main-btn");
 
 const number = $("#counter");
 
@@ -28,9 +29,16 @@ DisplayButton.on("click", () => {
     shop.removeClass("shop-active");
     DisplayButton.removeClass("X");
     DisplayButton.addClass("hamburger");
+    while (header.width < 300) {
+      console.log(header.innerWidth());
+      MainButton.css("margin-left", header.innerWidth());
+    }
   } else {
     shop.addClass("shop-active");
     DisplayButton.addClass("X");
     DisplayButton.removeClass("hamburger");
+    while (header.width > 0) {
+      MainButton.css("margin-left", header.innerwidth());
+    }
   }
 });
