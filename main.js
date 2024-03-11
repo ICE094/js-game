@@ -1,34 +1,32 @@
-const AdditionButton = document.getElementById("addition-btn");
-const BuyButton = document.getElementById("buy-btn");
-const DisplayButton = document.getElementById("display-btn");
-const shop = document.getElementById("shop");
+const AdditionButton = $("#addition-btn");
+const BuyButton = $("#buy-btn");
+const DisplayButton = $("#display-btn");
+const shop = $("#shop");
 
-const number = document.getElementById("counter");
+const number = $("#counter");
 
 let maincount = 0;
 let levelcount = 1;
+let intervalID = 0;
 
 function countUp() {
   maincount++;
-  if (maincount > 10) {
-    clearInterval(a);
-  }
   number.textContent = maincount;
 }
 
-AdditionButton.addEventListener("click", countUp, false);
+$("#AdditionButton").on("click", countUp, false);
 
-BuyButton.addEventListener(
+$("#BuyButton").on(
   "click",
   () => {
     levelcount++;
     BuyButton.textContent = `level${levelcount}`;
-    let a = setInterval(countUp, 1000);
+    intervalID = setInterval(countUp, 1000);
   },
   false
 );
 
-DisplayButton.addEventListener(
+$("#DisplayButton").on(
   "click",
   () => {
     if (shop.classList == "shop shop-active") {
