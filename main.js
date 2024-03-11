@@ -10,6 +10,9 @@ let levelcount = 1;
 
 function countUp() {
   maincount++;
+  if (maincount > 10) {
+    clearInterval(a);
+  }
   number.textContent = maincount;
 }
 
@@ -20,22 +23,20 @@ BuyButton.addEventListener(
   () => {
     levelcount++;
     BuyButton.textContent = `level${levelcount}`;
-    setInterval(countUp, 1000 - levelcount);
+    let a = setInterval(countUp, 1000);
   },
   false
 );
 
 DisplayButton.addEventListener(
   "click",
-  function () {
-    if (shop.style.display == "block") {
-      shop.style.display = "none";
-      shop.classList.remove("shop");
+  () => {
+    if (shop.classList == "shop shop-active") {
+      shop.classList.remove("shop-active");
       DisplayButton.classList.remove("X");
       DisplayButton.classList.add("hamburger");
     } else {
-      shop.style.display = "block";
-      shop.classList.add("shop");
+      shop.classList.add("shop-active");
       DisplayButton.classList.add("X");
       DisplayButton.classList.remove("hamburger");
     }
