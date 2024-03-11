@@ -29,8 +29,8 @@ DisplayButton.on("click", () => {
     shop.removeClass("shop-active");
     DisplayButton.removeClass("X");
     DisplayButton.addClass("hamburger");
+    console.log(header.innerWidth());
     while (header.width < 300) {
-      console.log(header.innerWidth());
       MainButton.css("margin-left", header.innerWidth());
     }
   } else {
