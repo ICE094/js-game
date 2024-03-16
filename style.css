@@ -1,6 +1,7 @@
 body {
   background-color: #000000;
   color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -18,14 +19,14 @@ body {
 }
 
 #counter {
-  font-size: 50px;
+  font-size: 45px;
   position: absolute;
   top: 0;
   text-align: center;
 }
 
 #addition-btn {
-  padding: 50px;
+  padding: 55;
   border-radius: 50%;
   background-color: #ff0000;
   border: solid 4px #fff;
@@ -79,11 +80,12 @@ body {
 }
 
 .shop {
-  transform: translateX(-300px);
-  transition: 0.5s;
+  transition: 0.4s ease-in;
+  transform: translateX(-200px);
 }
 
 .shop-active {
+  transition: 0.4s ease-out;
   transform: translateX(0px);
 }
 
@@ -96,11 +98,15 @@ body {
   transition: 0.5s;
 }
 
-.shop-btn {
+.buy-btn {
   margin-top: 20px;
   padding: 15px 40px;
   border-radius: 10px;
   border: solid 4px #fff;
+}
+
+.shop-text {
+  white-space: nowrap;
 }
 
 #buy-btn {
