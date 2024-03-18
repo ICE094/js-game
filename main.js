@@ -20,6 +20,12 @@ let levelCostCount2 = 1000;
 function countUp() {
   mainCount++;
   number.text(mainCount);
+  if (
+    mainCount >= levelCostCount2 / 2 &&
+    shopButton2.css("display") == "none"
+  ) {
+    shopButton2.css("display", "block");
+  }
 }
 
 additionButton.on("click", countUp);
@@ -51,19 +57,13 @@ buyButton2.on("click", () => {
 displayButton.on("click", () => {
   if (shop.hasClass("shop-active")) {
     shop.removeClass("shop-active");
-    displayButton.removeClass("X");
+    displayButton.removeClass("close");
     displayButton.addClass("hamburger");
     header.css("width", 0);
   } else {
     shop.addClass("shop-active");
-    displayButton.addClass("X");
+    displayButton.addClass("close");
     displayButton.removeClass("hamburger");
     header.css("width", 300);
-  }
-});
-
-$(window).on("mousemove", function () {
-  if (mainCount >= levelCostCount2) {
-    shopButton2.css("display", "block");
   }
 });
